@@ -32,7 +32,7 @@ function Nav() {
               Sign Out
             </button>
             <Link href="/profile">
-              <Image src={"/assets/images/"}
+              <Image src={"/assets/images/avatar.jpg"}
               width={37}
               height={37}
               className="rounded-full"
@@ -42,7 +42,8 @@ function Nav() {
               </Image>
             </Link>
           </div>
-        ): (<>
+        ): (
+        <>
         {providers && Object.values(providers).map((provider) => (
         <button
         type='button'
@@ -51,17 +52,18 @@ function Nav() {
         className='black_btn'
         >
           Sign In
-
         </button>
           ))}
-        </>)}
+        </>
+
+        )}
 
       </div>
       {/* mobile */}
       <div className="sm:hidden flex relative">
         {isUserLoggedIn ? (
           <div className='flex'>
-                    <Image src="/assets/images/logo.svg"
+                    <Image src="/assets/images/avatar.jpg"
                     className="rounded-full"
         alt="Prompt"
         width={30}
@@ -78,7 +80,7 @@ function Nav() {
           className='black_btn'
           >
             Sign In
-  
+
           </button>
             ))}
           </>)}
